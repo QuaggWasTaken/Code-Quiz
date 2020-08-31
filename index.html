@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Basics Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <h3><a href="./highscores.html" id="highscoreLink">View Highscores</a></h3>
+        <nav>
+            <ul>
+                <li>
+                    <h3 id="timer">Time Left: <span>75</span></h3>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="startScreen">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+            This is a short quix to test your basic knowledge of JavaScript and coding languages in general. Whenever you answer a question, you will be advanced to the next, with 15 seconds subtracted from your timer if it was incorrect. Your final score will be the remaining time of the timer.
+        </p>
+        <button id="start" onclick="showQuiz()">Start</button>
+    </section>
+    <section id="quiz">
+        <h2 id="question">Question</h2>
+        <div id="answers">
+            <button class="answer" id="1" onclick="checkResult(this.id)">Answer 1</button>
+            <button class="answer" id="2" onclick="checkResult(this.id)">Answer 2</button>
+            <button class="answer" id="3" onclick="checkResult(this.id)">Answer 3</button>
+            <button class="answer" id="4" onclick="checkResult(this.id)">Answer 4</button>
+        </div>
+        <h3 id="result"></h3>
+    </section>
+    <section id="submitScore">
+        <h1>All done!</h1>
+        <p>Your final score is <span id="score">75</span>!</p>
+        <label for="initials">Enter your initials for the leaderboard:</label>
+        <input type="text" name="initials" id="initials">
+        <button id="submitButton" onclick="submitScore()">Submit</button>
+    </section>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
